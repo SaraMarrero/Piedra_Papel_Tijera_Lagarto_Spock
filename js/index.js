@@ -51,6 +51,11 @@ function incrementarContador(){
     localStorage.setItem('contador', contador);
 }
 
+function reiniciarContador(){
+    contador = 0;
+    localStorage.setItem('contador', contador);
+}
+
     // Tablero
 const juego = document.querySelectorAll('.juego');
 const resultado = document.querySelector('.resultadoJuego');
@@ -191,9 +196,11 @@ function jugarTijera(){
     } else if(miJugada && jugadaAleatoria == jugadaSpock){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     } else if(miJugada && jugadaAleatoria == jugadaPiedra){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     }
 
     // Se muestra el mensaje de quien gana y quién pierde
@@ -240,20 +247,22 @@ function jugarPapel(){
     if(miJugada && jugadaAleatoria == jugadaPiedra){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaSpock){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaPapel){
         p3.textContent = 'You tie';
         a.textContent = 'PLAY AGAIN';
     } else if(miJugada && jugadaAleatoria == jugadaTijeras){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     } else if(miJugada && jugadaAleatoria == jugadaLagarto){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     }
 
     // Se muestra el mensaje de quien gana y quién pierde
@@ -266,6 +275,7 @@ function jugarPapel(){
 
     tablero.appendChild(solucion);
 }
+
 //----- PIEDRA -----//
 function jugarPiedra(){
 
@@ -299,20 +309,22 @@ function jugarPiedra(){
     if(miJugada && jugadaAleatoria == jugadaLagarto){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaTijeras){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaPiedra){
         p3.textContent = 'You tie';
         a.textContent = 'PLAY AGAIN';
     } else if(miJugada && jugadaAleatoria == jugadaPapel){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     } else if(miJugada && jugadaAleatoria == jugadaSpock){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     }
 
     // Se muestra el mensaje de quien gana y quién pierde
@@ -359,20 +371,22 @@ function jugarLagarto(){
     if(miJugada && jugadaAleatoria == jugadaSpock){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador()
     } else if(miJugada && jugadaAleatoria == jugadaPapel){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaLagarto){
         p3.textContent = 'You tie';
         a.textContent = 'PLAY AGAIN';
     } else if(miJugada && jugadaAleatoria == jugadaPiedra){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     } else if(miJugada && jugadaAleatoria == jugadaTijeras){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     }
 
     // Se muestra el mensaje de quien gana y quién pierde
@@ -419,20 +433,22 @@ function jugarSpock(){
     if(miJugada && jugadaAleatoria == jugadaTijeras){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador()
     } else if(miJugada && jugadaAleatoria == jugadaPiedra){
         p3.textContent = 'You win';
         a.textContent = 'PLAY AGAIN';
-        agregarContador();
+        incrementarContador();
     } else if(miJugada && jugadaAleatoria == jugadaSpock){
         p3.textContent = 'You tie';
         a.textContent = 'PLAY AGAIN';
     } else if(miJugada && jugadaAleatoria == jugadaPapel){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     } else if(miJugada && jugadaAleatoria == jugadaLagarto){
         p3.textContent = 'You lose';
         a.textContent = 'PLAY AGAIN';
+        reiniciarContador();
     }
 
     // Se muestra el mensaje de quien gana y quién pierde
