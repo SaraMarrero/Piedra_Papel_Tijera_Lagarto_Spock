@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel, tijera, lagarto, spock</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body id="body">
+    <section class="contenedor">
+        <article class="articlePuntuacion">
+            <div>
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/logo-bonus.svg" class="tituloPuntuacion">
+            </div>
+
+            <div class="puntuacion">
+                <p class="score">SCORE</p>
+                <p class="numero"></p>
+            </div>
+        </article>
+
+        <article class="juego" id="opciones">
+            <div class="tijera" id="tijera">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-scissors.svg" id="tijera">
+            </div>
+
+            <div class="papel" id="papel">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-paper.svg" id="papel">
+            </div>
+
+            <div class="piedra" id="piedra">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-rock.svg" id="piedra">
+            </div>
+
+            <div class="lagarto" id="lagarto">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-lizard.svg" id="lagarto">
+            </div>
+
+            <div class="spock" id="spock">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-spock.svg" id="spock">
+            </div>
+        </article>
+
+        <article class="tituloJS"></article>
+
+        <article class="resultadoJuego"></article>
+
+        <article class="reglas">
+            <div class="divReglas">
+                <input type='submit' value='RULES' id='rules' onclick='window.modal.showModal();'>
+            </div>
+        </article>
+
+        <dialog id='modal'>
+            <div class="tituloModal">
+                <p class="pRules">RULES</p>
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-close.svg" id="cerrar"> 
+            </div>
+            
+            <div>
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/image-rules-bonus.svg" class="dialog">
+            </div>
+
+            <div class="cerrar3">
+                <img src="./doc/piedra-papel-tijera-lagarto-spoock/images/icon-close.svg" id="cerrar2"> 
+            </div>
+        </dialog>
+    </section>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

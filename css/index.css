@@ -1,0 +1,1237 @@
+@media (min-width: 375px) and (max-width: 767px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background: radial-gradient(circle, #1f3756, #141539);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*---------- PUNTUTACION ----------*/
+    .articlePuntuacion{
+        border: 3px solid lightslategrey;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2em;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .tituloPuntuacion{
+        width: 90%;
+    }
+
+    .puntuacion{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        width: 40%;
+    }
+
+    .score{
+        color: blue;
+    }
+
+    .numero{
+        font-size: 40px;
+    }
+
+    /*---------- JUEGO ----------*/
+    .juego{
+        background-image: url('../doc/piedra-papel-tijera-lagarto-spoock/images/bg-pentagon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 45vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3333333333%);
+        grid-template-rows: repeat(3, 33.3333333333%);
+    }
+
+    .tijera{
+        background-color: white;
+        width: 100%;
+        height: 15vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 100px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-top: -1.5em;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+    }
+
+    .papel{
+        background-color: white;
+        width: 100%;
+        height: 15vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 100px;
+        grid-column: 3/3;
+        grid-row: 2/3;
+        margin-top: -1em;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+    }
+
+    .piedra{
+        background-color: white;
+        width: 100%;
+        height: 15vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 100px;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        margin-left: -1em;
+        margin-top: 1em;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+    }
+
+    .lagarto{
+        background-color: white;
+        width: 100%;
+        height: 15vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 1em;
+        margin-top: 1em;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+    }
+
+    .spock{
+        background-color: white;
+        width: 100%;
+        height: 15vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: -1em;
+        margin-left: -1em;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+    }
+
+    /*---------- REGLAS ----------*/
+    .reglas{
+        margin-top: 8em;
+        width: 95%;
+        margin-bottom: 3em;
+    }
+
+    .divReglas{
+        border: 3px solid lightslategray;
+        width: 25%;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+
+    input{
+        color: white;
+        background-color: #09495c;
+        border: #09495c;
+    }
+
+    /*---------- MODAL ----------*/
+
+    dialog{
+        border: 1px solid white;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .pRules{
+        margin-top: 3em;
+    }
+
+    .tituloModal{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 2em;
+    }
+
+    #cerrar{
+        display: none;
+    }
+
+    .cerrar3{
+        margin-top: 6em;
+    }
+
+    /*---------- JAVASCRIPT ----------*/
+
+    .jugada{
+        padding: 2rem;
+        width: 80%;
+        margin-left: 0.5em;
+        align-items: center;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: repeat(2, 50%);
+        margin: 0 auto;
+    }
+
+    .jugadaTijera{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+
+    }
+
+    .jugadaPapel{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaPiedra{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaLagarto{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaSpock{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+
+    .tituloJS{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .p1{
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 2.5em;
+    }
+
+    .p2{
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .p3{
+        color: white;
+        font-size: 40px;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .ruta{
+        text-decoration: none;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .solucion{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        text-align: center;
+        margin-top: 4em;
+    }
+
+    .jugadaTijera2{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaPapel2{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaPiedra2{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaLagarto2{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaSpock2{
+        background-color: white;
+        width: 75%;
+        height: 16vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background: radial-gradient(circle, #1f3756, #141539);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*---------- PUNTUTACION ----------*/
+    .articlePuntuacion{
+        border: 3px solid lightslategrey;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2em;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .puntuacion{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        width: 17%;
+    }
+
+    .score{
+        color: blue;
+    }
+
+    .numero{
+        font-size: 50px;
+    }
+
+    /*---------- JUEGO ----------*/
+    .juego{
+        background-image: url('../doc/piedra-papel-tijera-lagarto-spoock/images/bg-pentagon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 45vh;
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3333333333%);
+        grid-template-rows: repeat(3, 33.3333333333%);
+    }
+
+    .tijera{
+        background-color: white;
+        width: 100%;
+        height: 13vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 100px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+    }
+
+    .papel{
+        background-color: white;
+        width: 100%;
+        height: 13vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 100px;
+        grid-column: 3/3;
+        grid-row: 2/3;
+        margin-top: -1em;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+    }
+
+    .piedra{
+        background-color: white;
+        width: 100%;
+        height: 13vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 100px;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        margin-left: -2em;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+    }
+
+    .lagarto{
+        background-color: white;
+        width: 100%;
+        height: 13vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 2em;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+    }
+
+    .spock{
+        background-color: white;
+        width: 100%;
+        height: 13vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: -1em;
+        margin-left: -1em;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+    }
+
+    /*---------- REGLAS ----------*/
+    .reglas{
+        margin-top: 8em;
+        width: 95%;
+        margin-bottom: 3em;
+    }
+
+    .divReglas{
+        border: 3px solid lightslategray;
+        width: 25%;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+
+    input{
+        color: white;
+        background-color: #09495c;
+        border: #09495c;
+    }
+
+    /*---------- MODAL ----------*/
+
+    dialog{
+        border: 1px solid white;
+        padding: 6rem;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .pRules{
+        margin-top: -1em;
+    }
+
+    .tituloModal{
+        width: 90%;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 2em;
+    }
+
+    #cerrar{
+        display: none;
+    }
+
+    .cerrar3{
+        margin-top: 5em;
+    }
+
+    /*---------- JAVASCRIPT ----------*/
+
+    .jugada{
+        padding: 2rem;
+        width: 80%;
+        margin-left: 0.5em;
+        align-items: center;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: repeat(2, 50%);
+        margin: 0 auto;
+    }
+
+    .jugadaTijera{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaPapel{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaPiedra{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaLagarto{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaSpock{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .tituloJS{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+
+    .p1{
+        color: white;
+        font-weight: bold;
+        margin-left:1em;
+        font-size: 20px;
+    }
+
+    .p2{
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .p3{
+        color: white;
+        font-size: 40px;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .ruta{
+        text-decoration: none;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .solucion{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        text-align: center;
+        margin-top: 4em;
+    }
+
+    .jugadaTijera2{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-right: 0;
+    }
+
+    .jugadaPapel2{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaPiedra2{
+        background-color: white;
+        width: 60%;
+        height: 30vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaLagarto2{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+
+    .jugadaSpock2{
+        background-color: white;
+        width: 60%;
+        height: 20vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background: radial-gradient(circle, #1f3756, #141539);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*---------- PUNTUTACION ----------*/
+    .articlePuntuacion{
+        border: 3px solid lightslategrey;
+        width: 55%;
+        margin: 0 auto;
+        margin-top: 2em;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .puntuacion{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        width: 17%;
+    }
+
+    .score{
+        color: blue;
+    }
+
+    .numero{
+        font-size: 50px;
+    }
+
+    /*---------- JUEGO ----------*/
+    .juego{
+        height: 45vh;
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: repeat(3, 33.3333333333%);
+        grid-template-rows: repeat(3, 33.3333333333%);
+    }
+
+    #opciones{
+        background-image: url('../doc/piedra-papel-tijera-lagarto-spoock/images/bg-pentagon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .tijera{
+        background-color: white;
+        width: 80%;
+        height: 14vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 100px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+    }
+
+    .papel{
+        background-color: white;
+        width: 80%;
+        height: 14vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 100px;
+        grid-column: 3/3;
+        grid-row: 2/3;
+        margin-top: -1em;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+    }
+
+    .piedra{
+        background-color: white;
+        width: 80%;
+        height: 14vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 100px;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        margin-left: -3em;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+    }
+
+    .lagarto{
+        background-color: white;
+        width: 80%;
+        height: 14vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 5em;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+    }
+
+    .spock{
+        background-color: white;
+        width: 80%;
+        height: 14vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 100px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: -1em;
+        margin-left: 3em;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+    }
+
+    /*---------- REGLAS ----------*/
+    .reglas{
+        margin-top: 5em;
+        width: 95%;
+    }
+
+    .divReglas{
+        border: 3px solid lightslategray;
+        width: 12%;
+        padding: 0.5rem;
+        text-align: center;
+        float: right;
+        margin-bottom: 1em;
+        border-radius: 10px;
+    }
+
+    input{
+        color: white;
+        background-color: #09495c;
+        border: #09495c;
+    }
+
+    /*---------- MODAL ----------*/
+
+    dialog{
+        margin: 0 auto;
+        border-radius: 10px;
+        margin-top:7em;
+        border: 1px solid white;
+        padding: 1rem;
+    }
+
+    .tituloModal{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 1em;
+    }
+
+    #cerrar2{
+        display: none;
+    }
+
+
+    /*---------- JAVASCRIPT ----------*/
+
+    .jugada{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        width: 80%;
+        margin-left: 0.5em;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .jugadaTijera{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        order: 1;
+    }
+
+    .jugadaPapel{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        order: 1;
+    }
+
+    .jugadaPiedra{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        order: 1;
+    }
+
+    .jugadaLagarto{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        order: 1;
+    }
+
+    .jugadaSpock{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        order: 1;
+    }
+
+    .tituloJS{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+
+    .p1{
+        color: white;
+        font-weight: bold;
+        margin-left:1.5em;
+        font-size: 20px;
+    }
+
+    .p2{
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .p3{
+        color: white;
+        font-size: 40px;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .ruta{
+        text-decoration: none;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .solucion{
+        text-align: center;
+        order: 2;
+    }
+
+    .jugadaTijera2{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FACC2E;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #f9aa01, 0px 2px 0px #f9aa01, 0px 3px 0px #f9aa01, 0px 4px 0px #f9aa01, 0px 5px 0px #f9aa01, 0px 6px 0px #f9aa01, 0px 7px 0px #f9aa01, 0px 8px 0px #f9aa01, 0px 9px 0px #f9aa01;
+        order: 3;
+    }
+
+    .jugadaPapel2{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #0080FF;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #0058b0, 0px 2px 0px #0058b0, 0px 3px 0px #0058b0, 0px 4px 0px #0058b0, 0px 5px 0px #0058b0, 0px 6px 0px #0058b0, 0px 7px 0px #0058b0, 0px 8px 0px #0058b0, 0px 9px 0px #0058b0;
+        order: 3;
+    }
+
+    .jugadaPiedra2{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #FE2E64;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #ce043a, 0px 2px 0px #ce043a, 0px 3px 0px #ce043a, 0px 4px 0px #ce043a, 0px 5px 0px #ce043a, 0px 6px 0px #ce043a, 0px 7px 0px #ce043a, 0px 8px 0px #ce043a, 0px 9px 0px #ce043a;
+        order: 3;
+    }
+
+    .jugadaLagarto2{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #9F81F7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #8059f5, 0px 2px 0px #8059f5, 0px 3px 0px #8059f5, 0px 4px 0px #8059f5, 0px 5px 0px #8059f5, 0px 6px 0px #8059f5, 0px 7px 0px #8059f5, 0px 8px 0px #8059f5, 0px 9px 0px #8059f5;
+        order: 3;
+    }
+
+    .jugadaSpock2{
+        background-color: white;
+        width: 27%;
+        height: 26vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 13px solid #2EFEF7;
+        border-radius: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 0px #03cfc8, 0px 2px 0px #03cfc8, 0px 3px 0px #03cfc8, 0px 4px 0px #03cfc8, 0px 5px 0px #03cfc8, 0px 6px 0px #03cfc8, 0px 7px 0px #03cfc8, 0px 8px 0px #03cfc8, 0px 9px 0px #03cfc8;
+        order: 3;
+    }
+}
