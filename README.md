@@ -10,10 +10,12 @@ Este proyecto va sobre el juego piedra, papel, tijera, lagarto, spock. (Conocido
 # 👤Uso de la aplicación
 Al ser u juego sencillo y no necesitar iniciar sesión ni nada, cualquiera puede acceder a jugar.
 
-1. Para empezar el juego, en la página principal hay colocado un pentagono en el cuál en cada esquina hay una jugada (la piedra, el papel, la tijera, el lagarto y spock), el jugador tiene que seleccionar una de esas opciones.
-2. Tras seleccionar una de las opciones, se mostrar la opción elegida y el programa mostrará de manera aleatoria otra opción.
-3. Cuando el programa muestre su opción el programa mostrarrá quién gana y quién pierde junto a un botón que pone 'play again' que dandole se vuelve a la pantalla donde se muestran las opciones de juego.
-4. El contador sumara + 1 cada vez que gane, el juego acaba cuando el jugador pierde ya que el contador se pondrá a 0 y podrá volver a comenzar el juego.
+1. Si no sabe como se juega, al darle al botón de rules se mostrarán las reglas y lo que hace cada opción de juego.
+2. Para empezar el juego, en la página principal hay colocado un pentagono en el cuál en cada esquina hay una jugada (la piedra, el papel, la tijera, el lagarto y spock), el jugador tiene que seleccionar una de esas opciones.
+3. Tras seleccionar una de las opciones, se mostrar la opción elegida y el programa mostrará de manera aleatoria otra opción.
+4. Cuando el programa muestre su opción el programa mostrarrá quién gana y quién pierde junto a un botón que pone 'play again' que dandole se vuelve a la pantalla donde se muestran las opciones de juego.
+5. El contador sumara + 1 cada vez que gane, el juego acaba cuando el jugador pierde ya que el contador se pondrá a 0 y podrá volver a comenzar el juego.
+
 
 # 🪛Tecnologías
 Para llevar a cabo la realización de este proyecto, he utilizado:
