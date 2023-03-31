@@ -8,7 +8,7 @@ Este proyecto va sobre el juego piedra, papel, tijera, lagarto, spock. (Conocido
 ![Página principal](./doc/piedra-papel-tijera-lagarto-spoock/images/readme.jpg)
 
 # 👤Uso de la aplicación
-Al ser u juego sencillo y no necesitar iniciar sesión ni nada, cualquiera puede acceder a jugar.
+Al ser un juego sencillo y no necesitar iniciar sesión ni nada, cualquiera puede acceder a jugar.
 
 1. Si no sabe como se juega, al darle al botón de rules se mostrarán las reglas y lo que hace cada opción de juego.
 2. Para empezar el juego, en la página principal hay colocado un pentagono en el cuál en cada esquina hay una jugada (la piedra, el papel, la tijera, el lagarto y spock), el jugador tiene que seleccionar una de esas opciones.
