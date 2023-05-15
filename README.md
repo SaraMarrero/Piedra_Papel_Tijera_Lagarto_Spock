@@ -1,5 +1,5 @@
 # ⚠️ Antes de comenzar ⚠️
-Importante aclarar que no es una página web real, es un proyecto creado para el módulo de Desarrollo web en entorno cliente y Diseño de interfaces web de segundo de ciclo de Desarrollo de aplicaciones web.
+Importante aclarar que no es una página web real, es un proyecto creado para el módulo de Desarrollo web en entorno cliente y Diseño de interfaces web de segundo de ciclo de Desarrollo de aplicaciones web (idea sacada de la web Frontend Mentor).
 
 # Piedra, papel, tijera, lagarto, spock
 Este proyecto va sobre el juego piedra, papel, tijera, lagarto, spock. (Conocido por la serie The big bang theory).
