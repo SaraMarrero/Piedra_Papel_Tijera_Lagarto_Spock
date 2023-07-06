@@ -16,6 +16,17 @@ Al ser un juego sencillo y no necesitar iniciar sesión ni nada, cualquiera pued
 4. Cuando el programa muestre su opción el programa mostrarrá quién gana y quién pierde junto a un botón que pone 'play again' que dandole se vuelve a la pantalla donde se muestran las opciones de juego.
 5. El contador sumara + 1 cada vez que gane, el juego acaba cuando el jugador pierde ya que el contador se pondrá a 0 y podrá volver a comenzar el juego.
 
+# Reglas del juego
+* Tijeras cortan papel.
+* Papel tapa a piedra.
+* Piedra aplasta a lagarto.
+* Lagarto evenena a Spock.
+* Spock rompe tijeras.
+* Tijeras decapitan lagarto.
+* Lagarto devora papel.
+* Papel desautoriza Spock.
+* Spock vaporiza piedra.
+* Piedra aplasta a tijeras.
 
 # 🪛Tecnologías
 Para llevar a cabo la realización de este proyecto, he utilizado:
