@@ -4,7 +4,7 @@ Importante aclarar que no es una página web real, es un proyecto creado para el
 # Piedra, papel, tijera, lagarto, spock
 Este proyecto va sobre el juego piedra, papel, tijera, lagarto, spock. (Conocido por la serie The big bang theory).
 
-# 📸Página principal
+# 📸 Página principal
 ![Página principal](./doc/piedra-papel-tijera-lagarto-spoock/images/readme.jpg)
 
 # 👤Uso de la aplicación
