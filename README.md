@@ -35,5 +35,5 @@ Para llevar a cabo la realización de este proyecto, he utilizado:
 * JavaScript
 * Github
 
-# Autora
+# 👩🏻‍💻Autora
 * Sara Marrero Miranda
